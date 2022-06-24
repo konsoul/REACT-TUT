@@ -1,9 +1,8 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Notes from "./pages/Notes";
 import Create from "./pages/Create";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
 let theme = createTheme({
   typography: {
     fontFamily: "Quicksand",
