@@ -10,6 +10,13 @@ import RadioGroup from "@mui/material/RadioGroup";
 import { FormControl, FormControlLabel, FormLabel } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
+
+const formStyle = {
+  marginTop: 5,
+  marginBottom: 2,
+  display: "block",
+};
+
 export default function Create() {
   const navigate = useNavigate();
   // If there is no information present, send error
@@ -48,6 +55,7 @@ export default function Create() {
 
   return (
     <Container>
+     
       <Typography
         variant="h6"
         component="h2"
@@ -66,7 +74,7 @@ export default function Create() {
           <TextField
             onChange={(e) => setTitle(e.target.value)}
             label="Note Title"
-            color="secondary"
+            color="primary"
             fullWidth
             required
             error={titleError}
@@ -90,13 +98,7 @@ export default function Create() {
           />
         </Box>
 
-        <FormControl
-          sx={{
-            marginTop: 5,
-            marginBottom: 2,
-            display: "block",
-          }}
-        >
+        <FormControl sx={{ ...formStyle }}>
           <FormLabel>Note category</FormLabel>
           <RadioGroup
             value={category}
